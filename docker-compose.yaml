@@ -1,16 +1,17 @@
 version: '3.8'
 services:
+
   postgres:
-    image: postgres:13.5
-    container_name: postgres
+    image: postgres:14
     restart: always
     environment:
-      POSTGRES_USER: myuser
+      POSTGRES_USER: postgres
       POSTGRES_PASSWORD: mypassword
+      POSTGRES_DB: heroku_mori
     volumes:
       - postgres:/var/lib/postgresql/data
     ports:
-      - '5678:5432'
+      - 5678:5432
 
 volumes:
   postgres:
