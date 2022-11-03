@@ -7,11 +7,11 @@ services:
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: mypassword
-      POSTGRES_DB: heroku_mori
+      POSTGRES_DB: heroku01
     volumes:
       - postgres:/var/lib/postgresql/data
     ports:
-      - 5678:5432
+      - 5432:5432
 
 volumes:
   postgres:
