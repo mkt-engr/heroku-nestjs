@@ -1,3 +1,3 @@
 release: npx prisma migrate deploy 
-release: npx prisma seed
+release: npx prisma db seed
 web: npm run start:prod
