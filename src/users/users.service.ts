@@ -44,7 +44,14 @@ export class UsersService {
     console.log({ id }, 'findOneWithPost');
     return this.prisma.user.findUnique({
       where: { id },
-      // select: { posts: { select: { title: true } } },
+      include: {
+        posts: {
+          select: {
+            id: true,
+            title: true,
+          },
+        },
+      },
     });
   }
 
